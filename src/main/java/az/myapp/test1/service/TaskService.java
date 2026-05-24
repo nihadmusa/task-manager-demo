@@ -9,6 +9,7 @@ import az.myapp.test1.dto.response.TaskResponseDto;
 import az.myapp.test1.mapper.TaskMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 
@@ -52,6 +53,9 @@ public class TaskService {
 
         new TaskResponseDto();
 
+    }
+    public void deleteTask(Long id){
+        repository.deleteById(id);
     }
 
 }
